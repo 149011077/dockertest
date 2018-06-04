@@ -3,18 +3,18 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'sh \'echo build.\''
+        sh 'echo "build"'
       }
     }
     stage('test') {
       steps {
-        sh 'sh \'echo test.\''
+        sh 'echo "test"'
       }
     }
     stage('deploy') {
       steps {
-        sh '''sh \'sleep 130s\'
-sh \'echo deploy.\'
+        sh '''sleep 130s
+echo "deploy"
 '''
       }
     }
