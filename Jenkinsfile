@@ -20,6 +20,7 @@ pipeline {
               stage('Run shell') {
                 sh 'sleep 130s'
                 sh 'echo hello world.'
+                sh 'kubectl get pods --all-namespaces'
               }
             }
           }
