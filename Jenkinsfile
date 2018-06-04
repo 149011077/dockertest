@@ -13,9 +13,6 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        sh '''sleep 130s
-echo "deploy"
-'''
         script {
           def label = "mypod-${UUID.randomUUID().toString()}"
           podTemplate(label: label, cloud: 'kubernetes') {
