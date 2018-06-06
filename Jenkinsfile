@@ -19,9 +19,10 @@ pipeline {
             node(label) {
               checkout scm
               stage('Run shell') {
-                sh 'sleep 130s'
+                sh 'sleep 30s'
                 sh 'echo hello world.'
                 sh 'ls'
+                sh 'pwd'
               }
             }
           }
